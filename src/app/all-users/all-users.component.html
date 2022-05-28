@@ -1,0 +1,13 @@
+<h2>All Users</h2>
+
+
+<div class="container">
+  <mat-card *ngFor="let data of users">
+    <h2>Name: {{data.name}}</h2>
+    <p>Phone No: {{data.phoneNo}}</p>
+    <i (click)="deleteItem(data.id)" class="fa fa-trash fa-2x" style="color:red; cursor: pointer;"></i>
+    <a routerLink="/add">
+      <i class="fa fa-edit fa-2x" style="margin-left: 250px; color:blue; cursor: pointer;"></i>
+    </a>
+  </mat-card>
+</div>
