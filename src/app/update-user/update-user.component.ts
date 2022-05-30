@@ -25,7 +25,6 @@ export class UpdateUserComponent implements OnInit {
       this.id = response.data.id;
       this.name.setValue(response.data.name);
       this.phone.setValue(response.data.phoneNo);
-      
     });
   }
 
@@ -34,11 +33,11 @@ export class UpdateUserComponent implements OnInit {
       id: this.id,
       name: this.name.value,
       phoneNo: this.phone.value,
-      
     };
     this.userService
       .editUser(updatedUser)
       .subscribe((data) => console.log(data));
-      
+    this.name.reset();
+    this.phone.reset();
   }
 }
