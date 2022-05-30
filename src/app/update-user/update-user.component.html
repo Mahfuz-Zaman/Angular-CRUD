@@ -1,0 +1,25 @@
+<div style="position: relative">
+
+    <div class="header-dialog">
+        <h1>Update User</h1>
+    </div>
+
+    <div class="update-form" autocomplete="off">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input [formControl]="name" matInput placeholder="Enter title" required>
+            <mat-error>This field is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input [formControl]="phone" matInput placeholder="Enter phone" required>
+            <mat-error>This field is required</mat-error>
+        </mat-form-field>
+
+
+        <button mat-raised-button color="primary" type="button" (click)="onSubmit()">
+            Update User
+        </button>
+    </div>
+</div>

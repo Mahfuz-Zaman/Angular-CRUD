@@ -6,7 +6,7 @@
     <h2>Name: {{data.name}}</h2>
     <p>Phone No: {{data.phoneNo}}</p>
     <i (click)="deleteItem(data.id)" class="fa fa-trash fa-2x" style="color:red; cursor: pointer;"></i>
-    <a routerLink="/add">
+    <a routerLink="/update/{{data.id}}">
       <i class="fa fa-edit fa-2x" style="margin-left: 250px; color:blue; cursor: pointer;"></i>
     </a>
   </mat-card>

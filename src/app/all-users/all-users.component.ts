@@ -45,9 +45,10 @@ export class AllUsersComponent implements OnInit, OnDestroy {
       this.subData.unsubscribe();
     }
   }
+
   // Delete
   deleteItem(id: any) {
     this.userService.deleteUser(id);
-    this.users.splice(this.users.indexOf(id), 1);
+    this.users = this.users.filter((e) => e.id !== id);
   }
 }

@@ -4,10 +4,7 @@
     <h1>Add User</h1>
   </div>
 
-  <form [formGroup]="dataForm"
-        (ngSubmit)="onSubmit()"
-        autocomplete="off"
-        #templateForm="ngForm">
+  <form [formGroup]="dataForm" (ngSubmit)="onSubmit()" autocomplete="off" #templateForm="ngForm">
     <mat-form-field appearance="outline">
       <mat-label>Name</mat-label>
       <input formControlName="name" matInput placeholder="Enter title" required>
@@ -26,4 +23,3 @@
     </button>
   </form>
 </div>
-
